@@ -1,155 +1,111 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navyasree Siddareddy Gari – Portfolio</title>
+  <title>Navyasree Siddareddy Gari – Interactive Portfolio</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
+      margin: 0;
       background-color: #f0f4f8;
       color: #333;
     }
-    header {
+    .accordion {
+      max-width: 800px;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .accordion-section {
       background-color: #0047ab;
       color: #fff;
       padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background-color: #fff;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #0047ab;
-      border-bottom: 2px solid #0047ab;
-      padding-bottom: 5px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a.button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #0047ab;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
-    a.button:hover {
-      background-color: #00337a;
-    }
-    footer {
+      cursor: pointer;
       text-align: center;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #fff;
+      transition: background-color 0.3s;
+    }
+    .accordion-section:hover {
+      background-color: #00347a;
+    }
+    .accordion-content {
+      display: none;
       padding: 20px;
-      background-color: #0047ab;
-      color: #fff;
-      margin-top: 40px;
+      background-color: #fff;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      animation: fadein 0.5s;
+    }
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    a {
+      color: #0047ab;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Navyasree Siddareddy Gari</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="accordion">
+    <div class="accordion-section">About Me</div>
+    <div class="accordion-content">
+      <p>Certified ServiceNow professional with CSA and CAD certifications. Passionate about building intelligent ITSM solutions with automation, REST APIs, and modern AI integration.</p>
+    </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Certified ServiceNow trainee (CSA + CAD) passionate about building ServiceNow solutions, ITSM automation, and integrating modern technologies like REST APIs and LLMs. Eager to contribute to real-world problem-solving with a collaborative team.</p>
-  </section>
+    <div class="accordion-section">Technical Skills</div>
+    <div class="accordion-content">
+      <ul>
+        <li>Languages: Java, Python, SQL, JavaScript</li>
+        <li>ServiceNow: ITSM, CMDB, Flow Designer, Script Includes, Business Rules</li>
+        <li>Web Technologies: HTML, CSS</li>
+        <li>Tools: REST API, Postman, OpenCV, Git</li>
+      </ul>
+    </div>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Languages: Java, Python, SQL, JavaScript</li>
-      <li>ServiceNow: ITSM, CMDB, Flow Designer, Script Includes, Business Rules</li>
-      <li>Web: HTML, CSS</li>
-      <li>Tools: REST API, OpenCV, Git</li>
-    </ul>
-  </section>
+    <div class="accordion-section">Certifications</div>
+    <div class="accordion-content">
+      <ul>
+        <li>ServiceNow Certified System Administrator (CSA)</li>
+        <li>ServiceNow Certified Application Developer (CAD)</li>
+      </ul>
+    </div>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>ServiceNow Certified System Administrator (CSA)</li>
-      <li>ServiceNow Certified Application Developer (CAD)</li>
-    </ul>
-  </section>
+    <div class="accordion-section">Projects</div>
+    <div class="accordion-content">
+      <h3>AI-Powered Incident Summarizer for ServiceNow</h3>
+      <p>Developed an intelligent integration to summarize Incident Work Notes using LLM via REST API, enhancing agent productivity with automated Script Includes and Business Rules.</p>
+      <h3>Blockchain-Based Authentic Charity Platform</h3>
+      <p>Engineered a Python system using SHA-256 for secure, tamper-evident donation records to promote transparency and trust.</p>
+      <h3>Virtual Mouse Using Hand Gestures</h3>
+      <p>Created an interactive virtual mouse using Python and OpenCV to translate real-time hand gestures into mouse actions like click, drag, and scroll.</p>
+    </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <h3>AI-Powered Incident Summarizer for ServiceNow</h3>
-    <p>Integrated a Large Language Model (LLM) via REST API to automatically summarize Incident Work Notes. Automated using Script Includes and Business Rules with secure property storage.</p>
+    <div class="accordion-section">Achievements</div>
+    <div class="accordion-content">
+      <ul>
+        <li>2nd Prize – Essay Writing (Republic Day 2024)</li>
+        <li>1st Prize – Storytelling Competition (English Club)</li>
+      </ul>
+    </div>
 
-    <h3>Blockchain-Based Authentic Charity Platform</h3>
-    <p>Developed a Python-based secure donation system using SHA-256 hashing to ensure tamper-evident, transparent donation records with auditable logs.</p>
-
-    <h3>Virtual Mouse Using Hand Gestures</h3>
-    <p>Built a gesture-controlled mouse system using Python and OpenCV for real-time hand tracking and interpretation of finger gestures for mouse actions.</p>
-  </section>
-
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>2nd Prize – Essay Writing (Republic Day 2024)</li>
-      <li>1st Prize – Storytelling Competition (English Club)</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📍 Anantapur, Andhra Pradesh</p>
-    <p>📞 +91 8978419177</p>
-    <p>✉️ <a href="mailto:navyasreesiddareddygari@gmail.com">navyasreesiddareddygari@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/navyasree-s-92a576258" target="_blank">LinkedIn Profile</a></p>
-  </section>
-
-  <footer>
-    &copy; 2024 Navyasree Siddareddy Gari | All rights reserved
-  </footer>
+    <div class="accordion-section">Contact</div>
+    <div class="accordion-content">
+      <p>📍 Anantapur, Andhra Pradesh</p>
+      <p>📞 +91 8978419177</p>
+      <p>✉️ <a href="mailto:navyasreesiddareddygari@gmail.com">navyasreesiddareddygari@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/navyasree-s-92a576258" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </div>
 
   <script>
-    // Optional: Smooth scroll polyfill for older browsers
-    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+    const sections = document.querySelectorAll('.accordion-section');
+    sections.forEach((section, idx) => {
+      section.addEventListener('click', () => {
+        const content = section.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
       });
     });
   </script>
